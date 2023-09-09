@@ -158,9 +158,9 @@ const styles = {
         mb: 2
     },
     videoColumn: {
-       display: 'flex',
-       alignItems: 'center',
-       justifyContent: 'center'
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     videoDesc: {
         fontSize: '0.7rem',
@@ -201,8 +201,8 @@ const styles = {
         alignItems: 'center'
     },
     iconColumnText: {
-ml: 1,
-fontSize: '0.9rem'
+        ml: 1,
+        fontSize: '0.9rem'
     }
 
 }

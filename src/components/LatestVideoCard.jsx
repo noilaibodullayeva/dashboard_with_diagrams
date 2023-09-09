@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import thumbnail from "/src/assets/avatars/thumbail.jpg"
+
 function LatestVideoCard({props}) {
     return (
 
