@@ -2,41 +2,40 @@ import { Avatar, Box, Card, CardContent, Divider, Typography } from "@mui/materi
 import LatestVideoCard from "../../components/LatestVideoCard";
 import ColorText from "../../components/ColorText";
 
-function Dashboard() {
+function Dashboard({ theme }) {
     return (
         <Box>
             <Typography sx={styles.pageTitle} variant="h5">Channel Dashboard</Typography>
             <Box sx={styles.columnContainer}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                    <LatestVideoCard />
-                    <Card sx={styles.item} >
-                        <CardContent>
-                            <Typography variant="cardTitle">
-                                Latest Post
-                            </Typography>
-                            <Box sx={styles.postAuthorSection}>
-                                <Avatar sx={styles.avatar} src="src/assets/avatars/mine.jpg" />
-                                <Typography sx={styles.postMeta}>Noila's...</Typography>
-                                <Typography sx={styles.postMeta}>May 23, 2023</Typography>
+                <LatestVideoCard />
+                <Card sx={styles.item} >
+                    <CardContent>
+                        <Typography variant="cardTitle">
+                            Latest Post
+                        </Typography>
+                        <Box sx={styles.postAuthorSection}>
+                            <Avatar sx={styles.avatar} src="src/assets/avatars/mine.jpg" />
+                            <Typography sx={styles.postMeta}>Noila's...</Typography>
+                            <Typography sx={styles.postMeta}>May 23, 2023</Typography>
+                        </Box>
+                        <Typography variant="body2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, optio ea obcaecati quidem non nostrum! Optio impedit porro quia, sequi adipisci reprehenderit consequatur? Possimus, quo.</Typography>
+                        <Divider sx={styles.divider} />
+                        <Box sx={styles.postStats}>
+                            <Box>
+                                <Typography variant="body2" sx={{ marginTop: 1 }}>Likes</Typography>
+                                <Typography variant="h6" sx={{ marginTop: 1 }}>12</Typography>
                             </Box>
-                            <Typography variant="body2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, optio ea obcaecati quidem non nostrum! Optio impedit porro quia, sequi adipisci reprehenderit consequatur? Possimus, quo.</Typography>
-                            <Divider sx={styles.divider} />
-                            <Box sx={styles.postStats}>
-                                <Box>
-                                    <Typography variant="body2" sx={{ marginTop: 1 }}>Likes</Typography>
-                                    <Typography variant="h6" sx={{ marginTop: 1 }}>12</Typography>
-                                </Box>
-                                <Box>
-                                    <Typography variant="body2" sx={{ marginTop: 1 }}>Comments</Typography>
-                                    <Typography variant="h6" sx={{ marginTop: 1 }}>6</Typography>
-                                </Box>
+                            <Box>
+                                <Typography variant="body2" sx={{ marginTop: 1 }}>Comments</Typography>
+                                <Typography variant="h6" sx={{ marginTop: 1 }}>6</Typography>
                             </Box>
-                            <Typography sx={styles.cardAction} variant="link">GO TO COMMUNITY TAB</Typography>
-                        </CardContent>
-                    </Card>
+                        </Box>
+                        <Typography sx={styles.cardAction} variant="link">GO TO COMMUNITY TAB</Typography>
+                    </CardContent>
+                </Card>
                 </Box>
-
-
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <Card sx={styles.item2}>
                     <CardContent>
                         <Typography variant="cardTitle">Channel analytics</Typography>
@@ -75,102 +74,105 @@ function Dashboard() {
                         </Box>
                         <Typography sx={styles.cardAction} variant="link">GO TO VIDEO ANALYTICS</Typography>
                     </CardContent>
-                </Card>
+                </Card >
+                </Box>
+
+
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }} >
-                    <Card sx={styles.item}>
-                        <CardContent>
-                            <Typography variant="cardTitle">Latest Comments</Typography>
-                            <Typography variant="h7"><ColorText color='neutral.normal'>Channel comments I haven't responded to</ColorText></Typography>
+                <Card sx={styles.item}>
+                    <CardContent>
+                        <Typography variant="cardTitle">Latest Comments</Typography>
+                        <Typography variant="h7"><ColorText color='neutral.normal'>Channel comments I haven't responded to</ColorText></Typography>
 
 
-                            <Box sx={styles.commentRow}>
-                                <Avatar sx={styles.avatar} src='src/assets/avatars/mine.jpg' />
-                                <Box>
-                                    <Box sx={styles.commentDetailssection}>
-                                        <Typography sx={styles.postMeta}>
-                                            Noila's...
-                                        </Typography>
-                                        <Typography sx={styles.postMeta}>
-                                            2 weeks ago
-                                        </Typography>
-                                    </Box>
-                                    <Typography sx={styles.commentText}>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ducimus nam quam eius officia corrupti recusandae est cumque?
-                                    </Typography>
-                                </Box>
-                                <Box
-                                    component={'img'}
-                                    sx={styles.videoThumbnail}
-                                    src='src/assets/avatars/thumbail.jpg'
-                                />
-                            </Box>
-                            <Divider sx={styles.divider} />
-                            <Box sx={styles.commentRow}>
-                                <Avatar sx={styles.avatar} src='src/assets/avatars/mine.jpg' />
-                                <Box>
-                                    <Box sx={styles.commentDetailssection}>
-                                        <Typography sx={styles.postMeta}>
-                                            Noila's...
-                                        </Typography>
-                                        <Typography sx={styles.postMeta}>
-                                            1 weeks ago
-                                        </Typography>
-                                    </Box>
-                                    <Typography sx={styles.commentText}>
-                                        how can i deploy?
-                                    </Typography>
-                                </Box>
-                                <Box
-                                    component={'img'}
-                                    sx={styles.videoThumbnail}
-                                    src='src/assets/avatars/thumbail.jpg'
-                                />
-                            </Box>
-                            <Divider sx={styles.divider} />
-                            <Box sx={styles.commentRow}>
-                                <Avatar sx={styles.avatar} src='src/assets/avatars/mine.jpg' />
-                                <Box>
-                                    <Box sx={styles.commentDetailssection}>
-                                        <Typography sx={styles.postMeta}>
-                                            Noila's...
-                                        </Typography>
-                                        <Typography sx={styles.postMeta}>
-                                            2 weeks ago
-                                        </Typography>
-                                    </Box>
-                                    <Typography sx={styles.commentText}>
-                                        very helpfull
-                                    </Typography>
-                                </Box>
-                                <Box
-                                    component={'img'}
-                                    sx={styles.videoThumbnail}
-                                    src='src/assets/avatars/thumbail.jpg'
-                                />
-                            </Box>
-
-                            <Typography sx={styles.cardAction} variant="link">
-                                VIEW MORE
-                            </Typography>
-                        </CardContent>
-                    </Card>
-
-                    <Card sx={styles.item}>
-                        <CardContent sx={styles.ideaContent}>
+                        <Box sx={styles.commentRow}>
+                            <Avatar sx={styles.avatar} src='src/assets/avatars/mine.jpg' />
                             <Box>
-                                <Typography variant="cardTitle">Ideas for you</Typography>
-                                <Typography sx={styles.ideasQuestion}>Ready to get business savvy?</Typography>
-                                <Typography variant="h7">Get tips from a succesful creator fpr your videos on YouTube</Typography>
-                                <Typography sx={styles.cardAction} variant='link'>GET STARTED</Typography>
+                                <Box sx={styles.commentDetailssection}>
+                                    <Typography sx={styles.postMeta}>
+                                        Noila's...
+                                    </Typography>
+                                    <Typography sx={styles.postMeta}>
+                                        2 weeks ago
+                                    </Typography>
+                                </Box>
+                                <Typography sx={styles.commentText}>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem ducimus nam quam eius officia corrupti recusandae est cumque?
+                                </Typography>
                             </Box>
                             <Box
                                 component={'img'}
-                                sx={styles.ideaImage}
-                                src='/src/assets/avatars/download.png'
+                                sx={styles.videoThumbnail}
+                                src='src/assets/avatars/thumbail.jpg'
                             />
-                        </CardContent>
-                    </Card>
+                        </Box>
+                        <Divider sx={styles.divider} />
+                        <Box sx={styles.commentRow}>
+                            <Avatar sx={styles.avatar} src='src/assets/avatars/mine.jpg' />
+                            <Box>
+                                <Box sx={styles.commentDetailssection}>
+                                    <Typography sx={styles.postMeta}>
+                                        Noila's...
+                                    </Typography>
+                                    <Typography sx={styles.postMeta}>
+                                        1 weeks ago
+                                    </Typography>
+                                </Box>
+                                <Typography sx={styles.commentText}>
+                                    how can i deploy?
+                                </Typography>
+                            </Box>
+                            <Box
+                                component={'img'}
+                                sx={styles.videoThumbnail}
+                                src='src/assets/avatars/thumbail.jpg'
+                            />
+                        </Box>
+                        <Divider sx={styles.divider} />
+                        <Box sx={styles.commentRow}>
+                            <Avatar sx={styles.avatar} src='src/assets/avatars/mine.jpg' />
+                            <Box>
+                                <Box sx={styles.commentDetailssection}>
+                                    <Typography sx={styles.postMeta}>
+                                        Noila's...
+                                    </Typography>
+                                    <Typography sx={styles.postMeta}>
+                                        2 weeks ago
+                                    </Typography>
+                                </Box>
+                                <Typography sx={styles.commentText}>
+                                    very helpfull
+                                </Typography>
+                            </Box>
+                            <Box
+                                component={'img'}
+                                sx={styles.videoThumbnail}
+                                src='src/assets/avatars/thumbail.jpg'
+                            />
+                        </Box>
+
+                        <Typography sx={styles.cardAction} variant="link">
+                            VIEW MORE
+                        </Typography>
+                    </CardContent>
+                </Card>
+
+                <Card sx={styles.item}>
+                    <CardContent sx={styles.ideaContent}>
+                        <Box>
+                            <Typography variant="cardTitle">Ideas for you</Typography>
+                            <Typography sx={styles.ideasQuestion}>Ready to get business savvy?</Typography>
+                            <Typography variant="h7">Get tips from a succesful creator fpr your videos on YouTube</Typography>
+                            <Typography sx={styles.cardAction} variant='link'>GET STARTED</Typography>
+                        </Box>
+                        <Box
+                            component={'img'}
+                            sx={styles.ideaImage}
+                            src='/src/assets/avatars/download.png'
+                        />
+                    </CardContent>
+                </Card>
                 </Box>
             </Box>
         </Box>
@@ -184,16 +186,22 @@ const styles = {
         mb: 2
     },
     columnContainer: {
-        columns: '280px, 5',
-        maxWidth: 1400,
         display: 'flex',
-        gap: '15px'
+        flexDirection: { md: 'column', sm: 'column', lg: 'row' },
+        gap: {md: 5, sm:1},
+        // [theme.breakpoints.down("md")]: {
+        //     display: 'flex',
+        //     flexDirection: 'column'
+        // },
+        // [theme.breakpoints.down("sm")]: {
+        //     display: 'flex',
+        //     flexDirection: 'column'
+        // },
     },
     item: {
         width: "350px"
     },
     item2: {
-        height: ' ',
         width: '400px'
     },
     postAuthorSection: {
@@ -215,14 +223,15 @@ const styles = {
         my: 2
     },
     postStats: {
-        display: 'grid',
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr",
+        gridAutoRows: "25px",
         my: 3,
-        gap: 2,
-        justifyContent: 'space-between',
-        margin: 1
+        mb: 2
     },
     cardAction: {
-        mt: 2
+        mt: 4
+
     },
     videoStatsRow: {
         display: 'flex',
